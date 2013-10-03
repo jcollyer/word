@@ -2,24 +2,24 @@ App = Ember.Application.create();
 
 App.Router.map(function() {
   this.resource('about');
-  this.resource('posts', function() {
-    this.resource('post', { path: ':post_id' });
+  this.resource('biblebooks', function() {
+    this.resource('biblebook', { path: ':biblebook_id' });
   });
 });
 
-App.PostsRoute = Ember.Route.extend({
+App.BiblebooksRoute = Ember.Route.extend({
   model: function() {
-    return posts;
+    return biblebooks;
   }
 });
 
-App.PostRoute = Ember.Route.extend({
+App.BiblebookRoute = Ember.Route.extend({
   model: function(params) {
-    return posts.findBy('id', params.post_id);
+    return biblebooks.findBy('id', params.biblebook_id);
   }
 });
 
-App.PostController = Ember.ObjectController.extend({
+App.BiblebookController = Ember.ObjectController.extend({
   actions: {
     isEditing: false,
 
@@ -34,7 +34,7 @@ App.PostController = Ember.ObjectController.extend({
   }
 });
 
-var posts = [{
+var biblebooks = [{
   id: '1',
   title: "Rails is Omakase",
   author: { name: "d2h" },
