@@ -79,9 +79,9 @@
     <h2>by {{author.name}} <small class='muted'></small></h2>
 
     <hr>
-
-    <p>{{excerpt}}</p>
-    <p>{{body}}</p>
+    <h2>{{format-date date}}</h2>
+    <h4>{{format-markdown excerpt}}</h4>
+    <p>{{format-markdown body}}</p>
   </script>
 
    <script type="text/x-handlebars" id="biblebook/_edit">
@@ -93,8 +93,8 @@
   <script src="js/libs/jquery-1.9.1.js"></script>
   <script src="js/libs/handlebars-1.0.0.js"></script>
   <script src="js/libs/ember-1.0.0.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
   <script src="js/app.js"></script>
 
 </body>
