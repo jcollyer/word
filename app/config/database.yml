@@ -1,0 +1,16 @@
+development:
+  adapter: postgresql
+  database: word
+  username:
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: word
+  username:
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: word
+  username:
