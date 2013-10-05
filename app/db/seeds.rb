@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+puts "seed data goes here"
+
+Biblebook.create([
+  {
+    title: "genesis",
+    order: 1
+  },
+  {
+    title: "leviticus",
+    order: 2
+  }
+])
+
+puts "Complete! yous"

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  author: MyString
+  published_at: 2013-10-04
+  intro: MyText
+  extended: MyText
+  chapter: MyString
+  biblebook: MyString
+  order: 1
+
+two:
+  title: MyString
+  author: MyString
+  published_at: 2013-10-04
+  intro: MyText
+  extended: MyText
+  chapter: MyString
+  biblebook: MyString
+  order: 1
