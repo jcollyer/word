@@ -1,13 +1,20 @@
 <script type="text/x-handlebars">
-  <div class="navbar">
-    <div class="navbar-inner">
-      <a class="brand" href="#">the Bible</a>
-      <ul class="nav">
-        <li>{{#link-to 'biblebooks'}}Biblebooks{{/link-to}}</li>
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a class="brand" href="#">the Bible</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="left">
+        <li class="divider hide-for-small"></li>
         <li>{{#link-to 'about'}}About{{/link-to}}</li>
+        <li class="divider hide-for-small"></li>
+        <li>{{#link-to 'biblebooks'}}Biblebooks{{/link-to}}</li>
       </ul>
-    </div>
-  </div>
+    </section>
+  </nav>
 
   {{outlet}}
 </script>
@@ -34,24 +41,21 @@
 </script>
 
 <script type="text/x-handlebars" id="biblebooks">
-
-  <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span3">
-        <table class='table'>
-          <thead>
-            <tr><th>Recent Posts</th></tr>
-          </thead>
-          {{#each model}}
-          <tr><td>
-            {{#link-to 'biblebook' this}}{{title}} <small class='muted'>by {{author.name}}</small>{{/link-to}}
-          </td></tr>
-          {{/each}}
-        </table>
-      </div>
-      <div class="span9">
-        {{outlet}}
-      </div>
+  <div class="row">
+    <div class="small-6 large-3 columns">
+      <table class='table'>
+        <thead>
+          <tr><th>Recent Posts</th></tr>
+        </thead>
+        {{#each model}}
+        <tr><td>
+          {{#link-to 'biblebook' this}}{{title}} <small class='muted'>by {{author.name}}</small>{{/link-to}}
+        </td></tr>
+        {{/each}}
+      </table>
+    </div>
+    <div class="small-6 large-9 columns">
+      {{outlet}}
     </div>
   </div>
 </script>
